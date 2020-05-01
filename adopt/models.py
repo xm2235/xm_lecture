@@ -14,4 +14,5 @@ class Pet(models.Model):
 
 	color = models.CharField('Color', max_length = 50, choices = CHOICES)
 
-# Create your models here.
+	def __str__(self):
+		return f'{self.id}:{self.name}'
